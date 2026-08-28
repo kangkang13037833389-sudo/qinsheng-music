@@ -1,0 +1,10 @@
+{
+  "pages": ["pages/index/index"],
+  "window": {
+    "navigationBarTitleText": "秦声 · kangkang",
+    "navigationBarBackgroundColor": "#8f1d22",
+    "navigationBarTextStyle": "white",
+    "backgroundColor": "#f5efe3"
+  },
+  "sitemapLocation": "sitemap.json"
+}

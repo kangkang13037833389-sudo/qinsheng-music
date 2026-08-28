@@ -1,0 +1,15 @@
+<view class="page">
+  <view class="header"><view class="seal">秦</view><view><view class="name">秦声</view><view class="by">QINSHENG · kangkang</view></view></view>
+  <view class="search"><text>⌕</text><input placeholder="搜索曲名、演员、唱段…" bindinput="search" value="{{query}}"/></view>
+  <view class="hero"><view class="eyebrow">每日推荐 · 20首公开授权试听</view><view class="headline">听见八百里<text>秦川风骨</text></view><view class="daily">今日推荐《{{daily.title}}》</view><button bindtap="playDaily">▶ 播放今日推荐</button></view>
+  <view class="section-title"><text>一曲入秦</text><text class="count">{{shown.length}}首</text></view>
+  <view class="list">
+    <view class="track {{current.id===item.id?'active':''}}" wx:for="{{shown}}" wx:key="id">
+      <view class="num" data-id="{{item.id}}" bindtap="playTrack">{{current.id===item.id&&playing?'♫':index+1}}</view>
+      <view class="meta" data-id="{{item.id}}" bindtap="playTrack"><view class="title">{{item.title}}</view><view class="sub">{{item.artist}} · {{item.tags}}</view></view>
+      <view class="heart {{item.saved?'saved':''}}" data-id="{{item.id}}" bindtap="favorite">{{item.saved?'♥':'♡'}}</view>
+    </view>
+  </view>
+  <view class="player-spacer"></view>
+  <view class="player"><view class="playing"><view class="mini-seal">秦</view><view class="play-meta"><view>{{current.title}}</view><text>{{current.artist}}</text></view></view><view class="controls"><button bindtap="previous">‹</button><button class="main" bindtap="toggle">{{playing?'Ⅱ':'▶'}}</button><button bindtap="next">›</button></view><slider min="0" max="{{duration||100}}" value="{{progress}}" activeColor="#b52d2f" block-size="12" bindchange="seek"/></view>
+</view>

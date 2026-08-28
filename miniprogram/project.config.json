@@ -1,0 +1,7 @@
+{
+  "appid": "wx055093ebba6c7922",
+  "projectname": "qinsheng-music",
+  "miniprogramRoot": "./",
+  "compileType": "miniprogram",
+  "setting": { "es6": true, "enhance": true, "postcss": true, "minified": true, "urlCheck": false }
+}

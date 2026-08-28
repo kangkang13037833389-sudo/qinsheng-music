@@ -1,0 +1,1 @@
+{ "desc": "秦声小程序索引", "rules": [{ "action": "allow", "page": "*" }] }
